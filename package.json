@@ -1,0 +1,12 @@
+{
+  "name": "cypress_project",
+  "version": "1.0.0",
+  "dependencies": {
+    "cypress": "^13.14.2",
+    "mailslurp-client": "^15.20.2",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "cypress-mailslurp": "^1.10.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es6", // Обновите на ES6 для поддержки async/await
+    "lib": ["es6", "dom"],
+    "types": ["cypress", "node"],
+    "esModuleInterop": true, // Включите для корректной работы с импортами
+    "moduleResolution": "node" // Обеспечивает правильное разрешение модулей
+  },
+  "include": ["**/*.ts"]
+}
