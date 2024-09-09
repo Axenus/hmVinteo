@@ -37,6 +37,9 @@ npx cypress open
 ```bash
 npx cypress run
 ```
-
+#### В проекте установлен  MailSlurp
+###### Данные для авторизации:
+###### testqaautimation@tutamail.com
+###### TestQaGitHubAuth
 ## Задание №2 
 ### Перформанс тестирование веб-интерфейса GitFlic.
