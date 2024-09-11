@@ -8,5 +8,9 @@
   },
   "devDependencies": {
     "cypress-mailslurp": "^1.10.0"
+  },
+  "scripts": {
+    "test:performance": "k6 run performance_tests/test.js"
   }
+
 }

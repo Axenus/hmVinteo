@@ -1,0 +1,1766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="GitflicTEst">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.${project.version}. Please contact support@blazemeter.com for further support.</stringProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <longProp name="ThreadGroup.duration">0</longProp>
+        <longProp name="ThreadGroup.delay">0</longProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Authorization" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Authorization</stringProp>
+              <stringProp name="Header.value">token 82e3333d-3d62-463a-8b1b-f0326df0c37d</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+          <collectionProp name="AuthManager.auth_list">
+            <elementProp name="" elementType="Authorization">
+              <stringProp name="Authorization.url"></stringProp>
+              <stringProp name="Authorization.username"></stringProp>
+              <stringProp name="Authorization.password"></stringProp>
+              <stringProp name="Authorization.domain"></stringProp>
+              <stringProp name="Authorization.realm"></stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Authorization">
+              <stringProp name="Authorization.url">https://gitflic.ru/auth/login</stringProp>
+              <stringProp name="Authorization.username">testqaautimation@tutamail.com</stringProp>
+              <stringProp name="Authorization.password">TestQaGitHubAuth</stringProp>
+              <stringProp name="Authorization.domain"></stringProp>
+              <stringProp name="Authorization.realm"></stringProp>
+            </elementProp>
+          </collectionProp>
+          <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
+        </AuthManager>
+        <hashTree/>
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+          <boolProp name="HTTPSampler.image_parser">true</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+          <intProp name="HTTPSampler.concurrentPool">6</intProp>
+          <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/auth/login</stringProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.implementation"></stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+          <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+        </CookieManager>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Test" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/auth/login" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">auth/login</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="password" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">password</stringProp>
+                  <stringProp name="Argument.value">TestQaGitHubAuth</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="_csrf" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">_csrf</stringProp>
+                  <stringProp name="Argument.value">778295b8-5754-4451-ab8c-93d5023cce0b</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="email" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">email</stringProp>
+                  <stringProp name="Argument.value">testqaautimation@tutamail.com</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="Authorization" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">token 82e3333d-3d62-463a-8b1b-f0326df0c37d</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">Authorization</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">navigate</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-User" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-User</stringProp>
+                  <stringProp name="Header.value">?1</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">document</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">token 82e3333d-3d62-463a-8b1b-f0326df0c37d</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">0.0</stringProp>
+              <stringProp name="ConstantTimer.delay">0</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 0 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/project/create" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">project/create</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">navigate</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-User" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-User</stringProp>
+                  <stringProp name="Header.value">?1</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">document</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">10652.0</stringProp>
+              <stringProp name="ConstantTimer.delay">5326</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 10652 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/create/allowed-owners">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/create/allowed-owners</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">token 82e3333d-3d62-463a-8b1b-f0326df0c37d</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;ownerId&quot;:49189,&quot;owner&quot;:&quot;testqacucumber&quot;,&quot;aliasType&quot;:&quot;USER&quot;,&quot;title&quot;:&quot;Test&quot;,&quot;alias&quot;:&quot;test&quot;,&quot;description&quot;:&quot;test test&quot;,&quot;language&quot;:&quot;Markdown&quot;,&quot;isPrivate&quot;:true,&quot;needReadme&quot;:true,&quot;gitignoreValue&quot;:null,&quot;importMrApprovalConfigAndRules&quot;:false,&quot;importBranchProtection&quot;:false,&quot;importTagProtection&quot;:false,&quot;pipelineTemplateName&quot;:null}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/project/testqacucumber/test" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">project/testqacucumber/test</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">navigate</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-User" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-User</stringProp>
+                  <stringProp name="Header.value">?1</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">document</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">32691.0</stringProp>
+              <stringProp name="ConstantTimer.delay">16345.5</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 32691 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/edit/permission?file=&amp;branch=master&amp;commit=3e9c33e82a44da8cd6a3bb66250225d030807bdc" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/edit/permission</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="file" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">file</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="commit" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">commit</stringProp>
+                  <stringProp name="Argument.value">3e9c33e82a44da8cd6a3bb66250225d030807bdc</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="branch" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">branch</stringProp>
+                  <stringProp name="Argument.value">master</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/info/files" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/info/files</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/commit/3e9c33e82a44da8cd6a3bb66250225d030807bdc/last-for-files" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/commit/3e9c33e82a44da8cd6a3bb66250225d030807bdc/last-for-files</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/project/testqacucumber/test/blob/?file=README.md&amp;branch=master" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">project/testqacucumber/test/blob/</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="file" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">file</stringProp>
+                  <stringProp name="Argument.value">README.md</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="branch" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">branch</stringProp>
+                  <stringProp name="Argument.value">master</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">navigate</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-User" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-User</stringProp>
+                  <stringProp name="Header.value">?1</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">document</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">24395.0</stringProp>
+              <stringProp name="ConstantTimer.delay">12197.5</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 24395 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/edit/permission?file=README.md&amp;branch=master" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/edit/permission</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="file" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">file</stringProp>
+                  <stringProp name="Argument.value">README.md</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="branch" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">branch</stringProp>
+                  <stringProp name="Argument.value">master</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/info/files?branch=master" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/info/files</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="branch" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">branch</stringProp>
+                  <stringProp name="Argument.value">master</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/branch/last-commit?branchName=master" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/branch/last-commit</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="branchName" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">branchName</stringProp>
+                  <stringProp name="Argument.value">master</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/commit/3e9c33e82a44da8cd6a3bb66250225d030807bdc/last-for-files?filePath=" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/commit/3e9c33e82a44da8cd6a3bb66250225d030807bdc/last-for-files</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="filePath" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">filePath</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/edit/permission?file=README.md&amp;branch=master&amp;commit=3e9c33e82a44da8cd6a3bb66250225d030807bdc" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/edit/permission</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="file" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">file</stringProp>
+                  <stringProp name="Argument.value">README.md</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="commit" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">commit</stringProp>
+                  <stringProp name="Argument.value">3e9c33e82a44da8cd6a3bb66250225d030807bdc</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="branch" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">branch</stringProp>
+                  <stringProp name="Argument.value">master</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/blob?file=README.md&amp;branch=master&amp;commit=3e9c33e82a44da8cd6a3bb66250225d030807bdc" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/blob</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="file" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">file</stringProp>
+                  <stringProp name="Argument.value">README.md</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="commit" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">commit</stringProp>
+                  <stringProp name="Argument.value">3e9c33e82a44da8cd6a3bb66250225d030807bdc</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="branch" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">branch</stringProp>
+                  <stringProp name="Argument.value">master</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/blob/parsed-file?file=README.md&amp;branch=master&amp;commit=3e9c33e82a44da8cd6a3bb66250225d030807bdc" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/blob/parsed-file</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="file" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">file</stringProp>
+                  <stringProp name="Argument.value">README.md</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="commit" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">commit</stringProp>
+                  <stringProp name="Argument.value">3e9c33e82a44da8cd6a3bb66250225d030807bdc</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="branch" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">branch</stringProp>
+                  <stringProp name="Argument.value">master</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/branch/last-commit?branchName=master" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/branch/last-commit</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="branchName" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">branchName</stringProp>
+                  <stringProp name="Argument.value">master</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/edit/blob/raw?file=README.md&amp;branch=master&amp;commit=3e9c33e82a44da8cd6a3bb66250225d030807bdc" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/edit/blob/raw</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="file" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">file</stringProp>
+                  <stringProp name="Argument.value">README.md</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="commit" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">commit</stringProp>
+                  <stringProp name="Argument.value">3e9c33e82a44da8cd6a3bb66250225d030807bdc</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="branch" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">branch</stringProp>
+                  <stringProp name="Argument.value">master</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/edit/blob/edit" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/edit/blob/edit</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;filePath&quot;:&quot;&quot;,&quot;oldFileName&quot;:&quot;README.md&quot;,&quot;newFileName&quot;:null,&quot;commitHash&quot;:&quot;3e9c33e82a44da8cd6a3bb66250225d030807bdc&quot;,&quot;newBlobContent&quot;:&quot;# test\ntest test test \n***\n##  Ð¡ Ñ&#x87;ÐµÐ³Ð¾ Ð½Ð°Ñ&#x87;Ð°Ñ&#x82;Ñ&#x8c;?\nÐ&#x94;Ð»Ñ&#x8f; Ñ&#x82;Ð¾Ð³Ð¾, Ñ&#x87;Ñ&#x82;Ð¾Ð±Ñ&#x8b; Ð¾Ð±Ð»ÐµÐ³Ñ&#x87;Ð¸Ñ&#x82;Ñ&#x8c; Ð·Ð½Ð°ÐºÐ¾Ð¼Ñ&#x81;Ñ&#x82;Ð²Ð¾ Ñ&#x81; Ñ&#x81;ÐµÑ&#x80;Ð²Ð¸Ñ&#x81;Ð¾Ð¼ GitFlic Ð¸ Ð¿ÐµÑ&#x80;Ð²Ñ&#x8b;Ðµ Ñ&#x88;Ð°Ð³Ð¸ Ð² Ð½Ñ&#x91;Ð¼, Ð¼Ñ&#x8b; Ð¿Ð¾Ð´Ð³Ð¾Ñ&#x82;Ð¾Ð²Ð¸Ð»Ð¸ Ð½ÐµÑ&#x81;ÐºÐ¾Ð»Ñ&#x8c;ÐºÐ¾ Ñ&#x80;ÐµÐºÐ¾Ð¼ÐµÐ½Ð´Ð°Ñ&#x86;Ð¸Ð¹.  \nÐ£Ð¶Ðµ Ð¾Ð¿Ñ&#x8b;Ñ&#x82;Ð½Ñ&#x8b;Ð¹ Ð¿Ð¾Ð»Ñ&#x8c;Ð·Ð¾Ð²Ð°Ñ&#x82;ÐµÐ»Ñ&#x8c;? Ð&#x9e;Ñ&#x82;Ñ&#x80;ÐµÐ´Ð°ÐºÑ&#x82;Ð¸Ñ&#x80;Ñ&#x83;Ð¹Ñ&#x82;Ðµ Ð´Ð°Ð½Ð½Ñ&#x8b;Ð¹ **README** Ñ&#x84;Ð°Ð¹Ð» Ð¿Ð¾ Ñ&#x81;Ð²Ð¾ÐµÐ¼Ñ&#x83; Ñ&#x83;Ñ&#x81;Ð¼Ð¾Ñ&#x82;Ñ&#x80;ÐµÐ½Ð¸Ñ&#x8e;.  \nÐ&#x9d;Ðµ Ð·Ð½Ð°ÐµÑ&#x82;Ðµ Ñ&#x87;Ñ&#x82;Ð¾ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ&#x82;Ñ&#x8c; Ð² Ð½ÐµÐ³Ð¾? Ð&#x9f;ÐµÑ&#x80;ÐµÐ¹Ð´Ð¸Ñ&#x82;Ðµ Ð² Ñ&#x80;Ð°Ð·Ð´ÐµÐ» `\&quot;Ð§Ñ&#x82;Ð¾ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ñ&#x81;Ð¾Ð´ÐµÑ&#x80;Ð¶Ð°Ñ&#x82;Ñ&#x8c; README Ñ&#x84;Ð°Ð¹Ð»\&quot;`, Ð² ÐºÐ¾Ñ&#x82;Ð¾Ñ&#x80;Ð¾Ð¼ Ð¾Ð¿Ð¸Ñ&#x81;Ð°Ð½Ñ&#x8b; ÐºÐ»Ñ&#x8e;Ñ&#x87;ÐµÐ²Ñ&#x8b;Ðµ ÐºÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ&#x82;Ñ&#x8b; Ñ&#x85;Ð¾Ñ&#x80;Ð¾Ñ&#x88;ÐµÐ³Ð¾ README Ñ&#x84;Ð°Ð¹Ð»Ð°. \n\n## Ð&#x94;Ð¾Ð±Ð°Ð²Ñ&#x8c;Ñ&#x82;Ðµ Ñ&#x81;Ð²Ð¾Ð¸ Ñ&#x84;Ð°Ð¹Ð»Ñ&#x8b;\nÐ&#x95;Ñ&#x81;Ð»Ð¸ Ð²Ñ&#x8b; Ñ&#x80;ÐµÑ&#x88;Ð¸Ð»Ð¸ Ð½Ð°Ñ&#x87;Ð°Ñ&#x82;Ñ&#x8c; Ñ&#x80;Ð°Ð·Ñ&#x80;Ð°Ð±Ð¾Ñ&#x82;ÐºÑ&#x83; Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82;Ð° Ñ&#x81; Ñ&#x81;Ð¾Ð·Ð´Ð°Ð½Ð¸Ñ&#x8f; Ñ&#x80;ÐµÐ¿Ð¾Ð·Ð¸Ñ&#x82;Ð¾Ñ&#x80;Ð¸Ñ&#x8f; Ð² Ð½Ð°Ñ&#x88;ÐµÐ¼ Ñ&#x81;ÐµÑ&#x80;Ð²Ð¸Ñ&#x81;Ðµ, Ñ&#x82;Ð¾Ð³Ð´Ð° ÐºÐ»Ð¾Ð½Ð¸Ñ&#x80;Ñ&#x83;Ð¹Ñ&#x82;Ðµ Ñ&#x81;ÐµÐ±Ðµ Ð´Ð°Ð½Ð½Ñ&#x8b;Ð¹ Ñ&#x80;ÐµÐ¿Ð¾Ð·Ð¸Ñ&#x82;Ð¾Ñ&#x80;Ð¸Ð¹ Ñ&#x81;Ð»ÐµÐ´Ñ&#x83;Ñ&#x8e;Ñ&#x89;Ð¸Ð¼ Ð¾Ð±Ñ&#x80;Ð°Ð·Ð¾Ð¼:\n\n\n```\ngit clone https://gitflic.ru/project/testqacucumber/test.git\ncd test\n**Ð´Ð¾Ð±Ð°Ð²Ñ&#x8c;Ñ&#x82;Ðµ Ð¿ÐµÑ&#x80;Ð²Ñ&#x8b;Ðµ Ñ&#x84;Ð°Ð¹Ð»Ñ&#x8b; Ð²Ð°Ñ&#x88;ÐµÐ³Ð¾ Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82;Ð°**\ngit add .\ngit commit -m \&quot;Ð&#x9f;ÐµÑ&#x80;Ð²Ñ&#x8b;Ð¹ ÐºÐ¾Ð¼Ð¼Ð¸Ñ&#x82;\&quot;\ngit push -u origin master\n```\n\nÐ£Ð¶Ðµ Ñ&#x87;Ñ&#x82;Ð¾-Ñ&#x82;Ð¾ Ð´ÐµÐ»Ð°Ð»Ð¸ Ð² Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82;Ðµ? Ð&#x92; Ñ&#x82;Ð°ÐºÐ¾Ð¼ Ñ&#x81;Ð»Ñ&#x83;Ñ&#x87;Ð°Ðµ Ð¸Ð½Ð¸Ñ&#x86;Ð¸Ð°Ð»Ð¸Ð·Ð¸Ñ&#x80;Ñ&#x83;Ð¹Ñ&#x82;Ðµ Ð³Ð¸Ñ&#x82;-Ñ&#x80;ÐµÐ¿Ð¾Ð·Ð¸Ñ&#x82;Ð¾Ñ&#x80;Ð¸Ð¹ Ð² ÐºÐ¾Ñ&#x80;Ð½Ðµ Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82;Ð° Ð¸ Ð´Ð¾Ð±Ð°Ð²Ñ&#x8c;Ñ&#x82;Ðµ Ñ&#x82;ÐµÐºÑ&#x83;Ñ&#x89;Ð¸Ð¹ Ñ&#x80;ÐµÐ¿Ð¾Ð·Ð¸Ñ&#x82;Ð¾Ñ&#x80;Ð¸Ð¹ ÐºÐ°Ðº Ñ&#x83;Ð´Ð°Ð»Ñ&#x91;Ð½Ð½Ñ&#x8b;Ð¹ Ñ&#x80;ÐµÐ¿Ð¾Ð·Ð¸Ñ&#x82;Ð¾Ñ&#x80;Ð¸Ð¹:\n\n```\ncd existing_folder\ngit init\ngit remote add origin https://gitflic.ru/project/testqacucumber/test.git\ngit clone\n ***Ð´Ð¾Ð±Ð°Ð²Ñ&#x8c;Ñ&#x82;Ðµ Ð½Ð¾Ð²Ñ&#x8b;Ðµ Ñ&#x84;Ð°Ð¹Ð»Ñ&#x8b;***\ngit add .\ngit commit -m \&quot;Ð&#x9d;Ð¾Ð²Ñ&#x8b;Ð¹ ÐºÐ¾Ð¼Ð¼Ð¸Ñ&#x82;\&quot;\ngit push -u origin master\n```\n***\n\n\n# Ð§Ñ&#x82;Ð¾ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ñ&#x81;Ð¾Ð´ÐµÑ&#x80;Ð¶Ð°Ñ&#x82;Ñ&#x8c; README Ñ&#x84;Ð°Ð¹Ð»\n\n\nÐ&#x9f;Ñ&#x80;ÐµÐ¶Ð´Ðµ Ð²Ñ&#x81;ÐµÐ³Ð¾, Ñ&#x81;Ñ&#x82;Ð¾Ð¸Ñ&#x82; Ð¿Ð¾Ð½Ð¸Ð¼Ð°Ñ&#x82;Ñ&#x8c;, Ñ&#x87;Ñ&#x82;Ð¾ `README.md` â&#x80;&#x94; Ñ&#x8d;Ñ&#x82;Ð¾ ÐºÑ&#x80;Ð°Ñ&#x82;ÐºÐ°Ñ&#x8f; Ð´Ð¾ÐºÑ&#x83;Ð¼ÐµÐ½Ñ&#x82;Ð°Ñ&#x86;Ð¸Ñ&#x8f;. Ð­Ñ&#x82;Ð¾ Ð¿ÐµÑ&#x80;Ð²Ð¾Ðµ, Ñ&#x87;Ñ&#x82;Ð¾ Ð²Ð¸Ð´Ð¸Ñ&#x82; Ñ&#x87;ÐµÐ»Ð¾Ð²ÐµÐº, ÐºÐ¾Ñ&#x82;Ð¾Ñ&#x80;Ñ&#x8b;Ð¹ Ð¾Ñ&#x82;ÐºÑ&#x80;Ñ&#x8b;Ð²Ð°ÐµÑ&#x82; Ñ&#x80;ÐµÐ¿Ð¾Ð·Ð¸Ñ&#x82;Ð¾Ñ&#x80;Ð¸Ð¹. Ð&#x9f;Ð¾Ñ&#x8d;Ñ&#x82;Ð¾Ð¼Ñ&#x83; Ð·Ð´ÐµÑ&#x81;Ñ&#x8c; Ð²Ð°Ð¶Ð½Ð¾ Ð´Ð°Ñ&#x82;Ñ&#x8c; Ð´Ð¾Ñ&#x81;Ñ&#x82;Ð°Ñ&#x82;Ð¾Ñ&#x87;Ð½Ð¾ Ð¸Ð½Ñ&#x84;Ð¾Ñ&#x80;Ð¼Ð°Ñ&#x86;Ð¸Ð¸ Ð¾ Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82;Ðµ Ð¸ Ñ&#x80;Ð°Ñ&#x81;Ñ&#x81;ÐºÐ°Ð·Ð°Ñ&#x82;Ñ&#x8c;, Ñ&#x87;Ñ&#x82;Ð¾ Ð¾Ð½ Ð¸Ð· Ñ&#x81;ÐµÐ±Ñ&#x8f; Ð¿Ñ&#x80;ÐµÐ´Ñ&#x81;Ñ&#x82;Ð°Ð²Ð»Ñ&#x8f;ÐµÑ&#x82;.\nÐ&#x9a;Ð»Ñ&#x8e;Ñ&#x87;ÐµÐ²Ð°Ñ&#x8f; Ð¸Ð½Ñ&#x84;Ð¾Ñ&#x80;Ð¼Ð°Ñ&#x86;Ð¸Ñ&#x8f;, ÐºÐ¾Ñ&#x82;Ð¾Ñ&#x80;Ñ&#x83;Ñ&#x8e; Ð´Ð¾Ð»Ð¶ÐµÐ½ Ñ&#x81;Ð¾Ð´ÐµÑ&#x80;Ð¶Ð°Ñ&#x82;Ñ&#x8c; README Ñ&#x84;Ð°Ð¹Ð»:\n\n## Ð&#x9d;Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð¸ Ð¾Ð¿Ð¸Ñ&#x81;Ð°Ð½Ð¸Ðµ\nÐ&#x9d;Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82;Ð° Ð´Ð¾Ð»Ð¶Ð½Ð¾ Ð±Ñ&#x8b;Ñ&#x82;Ñ&#x8c; Ð¿Ñ&#x80;Ð¾Ñ&#x81;Ñ&#x82;Ñ&#x8b;Ð¼ Ð¸ Ð¿Ð¾Ð½Ñ&#x8f;Ñ&#x82;Ð½Ñ&#x8b;Ð¼ (Ñ&#x87;Ð°Ñ&#x89;Ðµ Ð²Ñ&#x81;ÐµÐ³Ð¾ Ñ&#x8d;Ñ&#x82;Ð¾ Ð¾Ð´Ð½Ð¾ Ñ&#x81;Ð»Ð¾Ð²Ð¾).\nÐ&#x9e;Ð¿Ð¸Ñ&#x81;Ð°Ð½Ð¸Ðµ Ð´Ð¾Ð»Ð¶Ð½Ð¾ Ð¾Ð¿Ð¸Ñ&#x81;Ñ&#x8b;Ð²Ð°Ñ&#x82;Ñ&#x8c; Ð¾Ñ&#x81;Ð½Ð¾Ð²Ð½Ñ&#x8b;Ðµ Ñ&#x84;Ñ&#x83;Ð½ÐºÑ&#x86;Ð¸Ð¸ Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82;Ð°, Ð²ÐºÐ»Ñ&#x8e;Ñ&#x87;Ð°Ñ&#x8f; ÐµÐ³Ð¾ Ð¾Ñ&#x81;Ð¾Ð±ÐµÐ½Ð½Ð¾Ñ&#x81;Ñ&#x82;Ð¸ Ð¸ Ð½Ð°Ð·Ð½Ð°Ñ&#x87;ÐµÐ½Ð¸Ðµ. \nÐ&#x95;Ñ&#x81;Ð»Ð¸ Ñ&#x83; Ð²Ð°Ñ&#x88;ÐµÐ³Ð¾ Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82;Ð° ÐµÑ&#x81;Ñ&#x82;Ñ&#x8c; Ð°Ð»Ñ&#x8c;Ñ&#x82;ÐµÑ&#x80;Ð½Ð°Ñ&#x82;Ð¸Ð²Ð½Ñ&#x8b;Ðµ Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82;Ñ&#x8b;, Ñ&#x82;Ð¾ Ð² Ð¾Ð¿Ð¸Ñ&#x81;Ð°Ð½Ð¸Ð¸ Ð¼Ð¾Ð¶Ð½Ð¾ Ð¿ÐµÑ&#x80;ÐµÑ&#x87;Ð¸Ñ&#x81;Ð»Ð¸Ñ&#x82;Ñ&#x8c; ÐºÐ»Ñ&#x8e;Ñ&#x87;ÐµÐ²Ñ&#x8b;Ðµ Ð¾Ñ&#x82;Ð»Ð¸Ñ&#x87;Ð¸Ñ&#x8f;, ÐºÐ¾Ñ&#x82;Ð¾Ñ&#x80;Ñ&#x8b;Ðµ Ð²Ñ&#x8b;Ð´ÐµÐ»Ñ&#x8f;Ñ&#x8e;Ñ&#x82; Ð²Ð°Ñ&#x88; Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82; Ð½Ð° Ñ&#x84;Ð¾Ð½Ðµ Ð²Ñ&#x81;ÐµÑ&#x85; Ð¾Ñ&#x81;Ñ&#x82;Ð°Ð»Ñ&#x8c;Ð½Ñ&#x8b;Ñ&#x85;.\n\n## Ð£Ñ&#x81;Ñ&#x82;Ð°Ð½Ð¾Ð²ÐºÐ° Ð¸ Ð½Ð°Ñ&#x81;Ñ&#x82;Ñ&#x80;Ð¾Ð¹ÐºÐ°\nÐ¢Ð°ÐºÐ¶Ðµ Ð² `README` Ñ&#x84;Ð°Ð¹Ð»Ðµ Ñ&#x80;ÐµÐºÐ¾Ð¼ÐµÐ½Ð´Ñ&#x83;ÐµÑ&#x82;Ñ&#x81;Ñ&#x8f; Ð¿ÐµÑ&#x80;ÐµÑ&#x87;Ð¸Ñ&#x81;Ð»Ð¸Ñ&#x82;Ñ&#x8c; Ð½ÐµÐ¾Ð±Ñ&#x85;Ð¾Ð´Ð¸Ð¼Ñ&#x8b;Ðµ Ð¸Ð½Ñ&#x81;Ñ&#x82;Ñ&#x80;Ñ&#x83;ÐºÑ&#x86;Ð¸Ð¸ Ð´Ð»Ñ&#x8f; Ñ&#x83;Ñ&#x81;Ñ&#x82;Ð°Ð½Ð¾Ð²ÐºÐ¸, \nÐ±Ñ&#x83;Ð´Ñ&#x8c; Ñ&#x82;Ð¾ Ð¸Ñ&#x81;Ð¿Ð¾Ð»Ñ&#x8c;Ð·Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð¿Ð°ÐºÐµÑ&#x82;Ð½Ñ&#x8b;Ñ&#x85; Ð¼ÐµÐ½ÐµÐ´Ð¶ÐµÑ&#x80;Ð¾Ð² (Ð½Ð°Ð¿Ñ&#x80;Ð¸Ð¼ÐµÑ&#x80;, `Homebrew` Ð½Ð° MacOS Ð¸Ð»Ð¸ `apt` Ð½Ð° Linux), \nÐ·Ð°Ð²Ð¸Ñ&#x81;Ð¸Ð¼Ð¾Ñ&#x81;Ñ&#x82;Ð¸, ÐºÐ¾Ñ&#x82;Ð¾Ñ&#x80;Ñ&#x8b;Ðµ Ð¼Ð¾Ð³Ñ&#x83;Ñ&#x82; Ð¿Ð¾Ð½Ð°Ð´Ð¾Ð±Ð¸Ñ&#x82;Ñ&#x8c;Ñ&#x81;Ñ&#x8f; Ð² Ñ&#x85;Ð¾Ð´Ðµ Ð¸Ñ&#x81;Ð¿Ð¾Ð»Ñ&#x8c;Ð·Ð¾Ð²Ð°Ð½Ð¸Ñ&#x8f;, Ð° Ñ&#x82;Ð°ÐºÐ¶Ðµ Ñ&#x88;Ð°Ð³Ð¸ Ð¿Ð¾ Ð¸Ñ&#x85; Ð½Ð°Ñ&#x81;Ñ&#x82;Ñ&#x80;Ð¾Ð¹ÐºÐµ.\n\n## Contributing\nÐ&#x9c;Ð¾Ð¶Ð½Ð¾ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ&#x82;Ñ&#x8c; Ð¸Ð½Ñ&#x84;Ð¾Ñ&#x80;Ð¼Ð°Ñ&#x86;Ð¸Ñ&#x8e; Ð¾ Ñ&#x82;Ð¾Ð¼, ÐºÐ°Ðº Ð¿Ñ&#x80;Ð¸Ð½Ñ&#x8f;Ñ&#x82;Ñ&#x8c; Ñ&#x83;Ñ&#x87;Ð°Ñ&#x81;Ñ&#x82;Ð¸Ðµ Ð² Ñ&#x80;Ð°Ð·Ñ&#x80;Ð°Ð±Ð¾Ñ&#x82;ÐºÐµ Ð²Ð°Ñ&#x88;ÐµÐ³Ð¾ Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82;Ð°, ÐºÐ°Ðº Ñ&#x81;Ñ&#x82;Ð°Ñ&#x82;Ñ&#x8c; Ð½ÐµÐ¿Ð¾Ñ&#x81;Ñ&#x80;ÐµÐ´Ñ&#x81;Ñ&#x82;Ð²ÐµÐ½Ð½Ñ&#x8b;Ð¼ Ñ&#x83;Ñ&#x87;Ð°Ñ&#x81;Ñ&#x82;Ð½Ð¸ÐºÐ¾Ð¼, Ð¿Ñ&#x80;Ð°Ð²Ð¸Ð»Ð° Ð¾Ñ&#x84;Ð¾Ñ&#x80;Ð¼Ð»ÐµÐ½Ð¸Ñ&#x8f; pull-requests Ð¸ Ñ&#x82;.Ð´.\n\n## Ð&#x9a;Ð¾Ð½Ñ&#x82;Ð°ÐºÑ&#x82;Ñ&#x8b;\nÐ¡Ñ&#x81;Ñ&#x8b;Ð»ÐºÐ¸ Ð½Ð° Ð²Ð½ÐµÑ&#x88;Ð½Ð¸Ðµ Ñ&#x80;ÐµÑ&#x81;Ñ&#x83;Ñ&#x80;Ñ&#x81;Ñ&#x8b;, Ñ&#x82;Ð°ÐºÐ¸Ðµ ÐºÐ°Ðº Ð´Ð¾ÐºÑ&#x83;Ð¼ÐµÐ½Ñ&#x82;Ð°Ñ&#x86;Ð¸Ñ&#x8f;, Ð±Ð»Ð¾Ð³, Ñ&#x81;Ñ&#x82;Ñ&#x80;Ð°Ð½Ð¸Ñ&#x86;Ð° Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82;Ð° Ð² Ñ&#x81;Ð¾Ñ&#x86;Ð¸Ð°Ð»Ñ&#x8c;Ð½Ñ&#x8b;Ñ&#x85; Ñ&#x81;ÐµÑ&#x82;Ñ&#x8f;Ñ&#x85;, Ñ&#x81;Ð¾Ð¾Ð±Ñ&#x89;ÐµÑ&#x81;Ñ&#x82;Ð²Ð¾ Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82;Ð° Ð¸ Ñ&#x82;.Ð´.\n\n## Ð¡Ñ&#x82;Ð°Ñ&#x82;Ñ&#x83;Ñ&#x81; Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82;Ð°\nÐ&#x92; Ð´Ð°Ð½Ð½Ð¾Ð¼ Ñ&#x80;Ð°Ð·Ð´ÐµÐ»Ðµ Ñ&#x80;ÐµÐºÐ¾Ð¼ÐµÐ½Ð´Ñ&#x83;ÐµÑ&#x82;Ñ&#x81;Ñ&#x8f; Ñ&#x83;ÐºÐ°Ð·Ñ&#x8b;Ð²Ð°Ñ&#x82;Ñ&#x8c;, Ð½Ð° ÐºÐ°ÐºÐ¾Ð¹ Ñ&#x81;Ñ&#x82;Ð°Ð´Ð¸Ð¸ Ð½Ð°Ñ&#x85;Ð¾Ð´Ð¸Ñ&#x82;Ñ&#x81;Ñ&#x8f; Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82;, Ð°ÐºÑ&#x82;Ð¸Ð²Ð½Ð¾ Ñ&#x80;Ð°Ð·Ñ&#x80;Ð°Ð±Ð°Ñ&#x82;Ñ&#x8b;Ð²Ð°ÐµÑ&#x82;Ñ&#x81;Ñ&#x8f; Ð¸Ð»Ð¸ Ð½Ð°Ñ&#x85;Ð¾Ð´Ð¸Ñ&#x82;Ñ&#x81;Ñ&#x8f; Ð² Ñ&#x81;Ñ&#x82;Ð°Ð´Ð¸Ð¸ Ð·Ð°Ñ&#x81;Ñ&#x82;Ð¾Ñ&#x8f;.\nÐ&#x95;Ñ&#x81;Ð»Ð¸ Ð¶Ðµ Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82; Ð³Ð¾Ñ&#x82;Ð¾Ð² Ð¸ Ð²Ð¾ Ð²Ñ&#x81;Ñ&#x8e; Ð¸Ñ&#x81;Ð¿Ð¾Ð»Ñ&#x8c;Ð·Ñ&#x83;ÐµÑ&#x82;Ñ&#x81;Ñ&#x8f;, Ð¼Ð¾Ð¶Ð½Ð¾ Ñ&#x83;ÐºÐ°Ð·Ñ&#x8b;Ð²Ð°Ñ&#x82;Ñ&#x8c; Ð°ÐºÑ&#x82;Ñ&#x83;Ð°Ð»Ñ&#x8c;Ð½Ñ&#x83;Ñ&#x8e; Ð²ÐµÑ&#x80;Ñ&#x81;Ð¸Ñ&#x8e;, Ð° Ñ&#x82;Ð°ÐºÐ¶Ðµ Ð¿Ð¾Ñ&#x81;Ð»ÐµÐ´Ð½Ð¸Ðµ Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ñ&#x8f;, ÐºÐ¾Ñ&#x82;Ð¾Ñ&#x80;Ñ&#x8b;Ðµ Ð±Ñ&#x8b;Ð»Ð¸ Ñ&#x81;Ð´ÐµÐ»Ð°Ð½Ñ&#x8b; Ñ&#x81; Ð¼Ð¾Ð¼ÐµÐ½Ñ&#x82;Ð° Ð¿Ñ&#x80;ÐµÐ´Ñ&#x8b;Ð´Ñ&#x83;Ñ&#x89;ÐµÐ³Ð¾ Ñ&#x80;ÐµÐ»Ð¸Ð·Ð°.\n\n***\n\n# Ð&#x9f;Ð¾Ð»ÐµÐ·Ð½Ñ&#x8b;Ðµ Ñ&#x81;Ñ&#x81;Ñ&#x8b;Ð»ÐºÐ¸\n\n***\n\n## Ð Ð°Ð±Ð¾Ñ&#x82;Ð° Ñ&#x81; Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82;Ð¾Ð¼\n\n- [ ] [Ð&#x9a;Ð°Ðº Ñ&#x81;Ð¾Ð·Ð´Ð°Ñ&#x82;Ñ&#x8c; Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82;](https://docs.gitflic.space/project/project_create)\n- [ ] [Ð&#x9a;Ð°Ðº Ð¸Ð¼Ð¿Ð¾Ñ&#x80;Ñ&#x82;Ð¸Ñ&#x80;Ð¾Ð²Ð°Ñ&#x82;Ñ&#x8c; Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82;](https://docs.gitflic.space/project/import_base)\n- [ ] [Ð&#x97;Ð°Ð¿Ñ&#x80;Ð¾Ñ&#x81;Ñ&#x8b; Ð½Ð° Ñ&#x81;Ð»Ð¸Ñ&#x8f;Ð½Ð¸Ðµ](https://docs.gitflic.space/project/merge_request)\n- [ ] [Ð&#x97;ÐµÑ&#x80;ÐºÐ°Ð»Ð¸Ñ&#x80;Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82;Ð°](https://docs.gitflic.space/project/mirror)\n- [ ] [Ð&#x98;Ð¼Ð¿Ð¾Ñ&#x80;Ñ&#x82;Ð¸Ñ&#x80;Ð¾Ð²Ð°Ñ&#x82;Ñ&#x8c; Ð¿Ñ&#x80;Ð¾ÐµÐºÑ&#x82; Ñ&#x81; GitLab](https://docs.gitflic.space/project/import)\n\n## Ð&#x9a;Ð¾Ð¼Ð°Ð½Ð´Ñ&#x8b;\n- [ ] [Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ&#x8b;](https://docs.gitflic.space/team/create)\n- [ ] [Ð&#x9e;Ð±Ð·Ð¾Ñ&#x80; ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ&#x8b;](https://docs.gitflic.space/team/view)\n- [ ] [Ð&#x9d;Ð°Ñ&#x81;Ñ&#x82;Ñ&#x80;Ð¾Ð¹ÐºÐ° ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ&#x8b;](https://docs.gitflic.space/team/settings)\n\n## Ð ÐµÐµÑ&#x81;Ñ&#x82;Ñ&#x80; Ð¿Ð°ÐºÐµÑ&#x82;Ð¾Ð²\n- [ ] [Ð ÐµÐµÑ&#x81;Ñ&#x82;Ñ&#x80; Ð¿Ð°ÐºÐµÑ&#x82;Ð¾Ð²](https://docs.gitflic.space/registry/package)\n- [ ] [PyPi](https://docs.gitflic.space/registry/pypi_registry)\n- [ ] [Generic](https://docs.gitflic.space/registry/generic_registry)\n- [ ] [Maven](https://docs.gitflic.space/registry/maven_registry)\n- [ ] [Docker](https://docs.gitflic.space/registry/docker)\n\n## Ð&#x9a;Ð¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸\n- [ ] [Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸](https://docs.gitflic.space/company/create)\n- [ ] [Ð&#x9e;Ð±Ð·Ð¾Ñ&#x80; ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸](https://docs.gitflic.space/company/view)\n- [ ] [Ð¢Ð°Ñ&#x80;Ð¸Ñ&#x84;Ñ&#x8b; Ð¸ Ð¾Ð¿Ð»Ð°Ñ&#x82;Ð°](https://docs.gitflic.space/company/price)\n- [ ] [Ð&#x97;Ð°Ð¿Ñ&#x83;Ñ&#x81;Ðº Ð°Ð³ÐµÐ½Ñ&#x82;Ð° ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸](https://docs.gitflic.space/company/saas_runner_setup)\n\n## CI/CD\n- [ ] [Ð§Ñ&#x82;Ð¾ Ñ&#x82;Ð°ÐºÐ¾Ðµ GitFlic CI/CD](https://docs.gitflic.space/cicd/introduction)\n- [ ] [Ð&#x97;Ð°Ð´Ð°Ñ&#x87;Ð° (Job)](https://docs.gitflic.space/cicd/job)\n- [ ] [Ð&#x9a;Ð¾Ð½Ð²ÐµÐ¹ÐµÑ&#x80; (pipeline)](https://docs.gitflic.space/cicd/pipeline)\n- [ ] [Ð&#x90;Ð³ÐµÐ½Ñ&#x82;Ñ&#x8b;](https://docs.gitflic.space/cicd/agent)\n- [ ] [Ð¡Ð¿Ñ&#x80;Ð°Ð²Ð¾Ñ&#x87;Ð½Ð¸Ðº Ð´Ð»Ñ&#x8f; .yaml Ñ&#x84;Ð°Ð¹Ð»Ð°](https://docs.gitflic.space/cicd/gitflic-ci-yaml)\n\n## API\n- [ ] [Ð&#x92;Ð²ÐµÐ´ÐµÐ½Ð¸Ðµ Ð² GitFlic API](https://docs.gitflic.space/api/intro)\n- [ ] [Ð&#x9c;ÐµÑ&#x82;Ð¾Ð´Ñ&#x8b; Ð´Ð»Ñ&#x8f; Ð°Ð´Ð¼Ð¸Ð½Ð¸Ñ&#x81;Ñ&#x82;Ñ&#x80;Ð°Ñ&#x82;Ð¾Ñ&#x80;Ð°](https://docs.gitflic.space/api/admin)\n- [ ] [Ð&#x9f;Ð¾Ð»Ñ&#x83;Ñ&#x87;ÐµÐ½Ð¸Ðµ access Ñ&#x82;Ð¾ÐºÐµÐ½Ð°](https://docs.gitflic.space/api/access-token)\n\n\n## Ð&#x9f;Ð°Ð½ÐµÐ»Ñ&#x8c; Ð°Ð´Ð¼Ð¸Ð½Ð¸Ñ&#x81;Ñ&#x82;Ñ&#x80;Ð°Ñ&#x82;Ð¾Ñ&#x80;Ð°\n- [ ] [Ð&#x9f;Ð°Ð½ÐµÐ»Ñ&#x8c; Ð°Ð´Ð¼Ð¸Ð½Ð¸Ñ&#x81;Ñ&#x82;Ñ&#x80;Ð°Ñ&#x82;Ð¾Ñ&#x80;Ð°](https://docs.gitflic.space/admin_panel/intro)\n- [ ] [Ð&#x9f;Ð°Ð½ÐµÐ»Ñ&#x8c; Ñ&#x83;Ð¿Ñ&#x80;Ð°Ð²Ð»ÐµÐ½Ð¸Ñ&#x8f;](https://docs.gitflic.space/admin_panel/dashboard)\n- [ ] [Ð&#x9d;Ð°Ñ&#x81;Ñ&#x82;Ñ&#x80;Ð¾Ð¹ÐºÐ° LDAP](https://docs.gitflic.space/admin_panel/ldap)\n- [ ] [Ð&#x9a;Ð»Ñ&#x8e;Ñ&#x87;ÐµÐ²Ñ&#x8b;Ðµ Ð½Ð°Ñ&#x81;Ñ&#x82;Ñ&#x80;Ð¾Ð¹ÐºÐ¸](https://docs.gitflic.space/admin_panel/settings)\n\n## Ð&#x9e;Ð±Ñ&#x89;Ð°Ñ&#x8f; Ð¸Ð½Ñ&#x84;Ð¾Ñ&#x80;Ð¼Ð°Ñ&#x86;Ð¸Ñ&#x8f;\n- [ ] [Ð&#x93;Ð»Ð¾Ñ&#x81;Ñ&#x81;Ð°Ñ&#x80;Ð¸Ð¹](https://docs.gitflic.space/common/gloss)\n- [ ] [Ð&#x9f;Ñ&#x80;Ð°Ð²Ð° Ð´Ð¾Ñ&#x81;Ñ&#x82;Ñ&#x83;Ð¿Ð° Ñ&#x80;Ð¾Ð»ÐµÐ¹](https://docs.gitflic.space/common/manage_roles)\n- [ ] [Ð&#x92;ÐµÐ±Ñ&#x85;Ñ&#x83;ÐºÐ¸](https://docs.gitflic.space/common/webhook)&quot;,&quot;commitMessage&quot;:&quot;Ð&#x9e;Ð±Ð½Ð¾Ð²Ð»ÐµÐ½ Ñ&#x84;Ð°Ð¹Ð» README.md&quot;,&quot;sourceBranch&quot;:&quot;master&quot;,&quot;targetBranch&quot;:&quot;master&quot;,&quot;projectAlias&quot;:&quot;test&quot;,&quot;ownerAlias&quot;:&quot;testqacucumber&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/project/testqacucumber/test/blob?file=README.md&amp;branch=master" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">project/testqacucumber/test/blob</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="file" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">file</stringProp>
+                  <stringProp name="Argument.value">README.md</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="branch" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">branch</stringProp>
+                  <stringProp name="Argument.value">master</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">navigate</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-User" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-User</stringProp>
+                  <stringProp name="Header.value">?1</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">document</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">32099.0</stringProp>
+              <stringProp name="ConstantTimer.delay">16049.5</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 32099 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/edit/permission?file=README.md&amp;branch=master" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/edit/permission</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="file" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">file</stringProp>
+                  <stringProp name="Argument.value">README.md</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="branch" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">branch</stringProp>
+                  <stringProp name="Argument.value">master</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/info/files?branch=master" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/info/files</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="branch" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">branch</stringProp>
+                  <stringProp name="Argument.value">master</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/branch/last-commit?branchName=master" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/branch/last-commit</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="branchName" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">branchName</stringProp>
+                  <stringProp name="Argument.value">master</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/commit/e23e664f98a299b7c9190018c48e670be17b31aa/last-for-files?filePath=" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/commit/e23e664f98a299b7c9190018c48e670be17b31aa/last-for-files</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="filePath" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">filePath</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/edit/permission?file=README.md&amp;branch=master&amp;commit=e23e664f98a299b7c9190018c48e670be17b31aa" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/edit/permission</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="file" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">file</stringProp>
+                  <stringProp name="Argument.value">README.md</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="commit" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">commit</stringProp>
+                  <stringProp name="Argument.value">e23e664f98a299b7c9190018c48e670be17b31aa</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="branch" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">branch</stringProp>
+                  <stringProp name="Argument.value">master</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/blob?file=README.md&amp;branch=master&amp;commit=e23e664f98a299b7c9190018c48e670be17b31aa" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/blob</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="file" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">file</stringProp>
+                  <stringProp name="Argument.value">README.md</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="commit" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">commit</stringProp>
+                  <stringProp name="Argument.value">e23e664f98a299b7c9190018c48e670be17b31aa</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="branch" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">branch</stringProp>
+                  <stringProp name="Argument.value">master</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/blob/parsed-file?file=README.md&amp;branch=master&amp;commit=e23e664f98a299b7c9190018c48e670be17b31aa" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/blob/parsed-file</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="file" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">file</stringProp>
+                  <stringProp name="Argument.value">README.md</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="commit" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">commit</stringProp>
+                  <stringProp name="Argument.value">e23e664f98a299b7c9190018c48e670be17b31aa</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="branch" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">branch</stringProp>
+                  <stringProp name="Argument.value">master</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/project/testqacucumber/test/setting" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">project/testqacucumber/test/setting</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">navigate</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-User" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-User</stringProp>
+                  <stringProp name="Header.value">?1</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">document</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">68500.0</stringProp>
+              <stringProp name="ConstantTimer.delay">34250</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 68500 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/topic" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/topic</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/api/project/testqacucumber/test/tabs" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/project/testqacucumber/test/tabs</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRF-TOKEN" elementType="Header">
+                  <stringProp name="Header.name">X-CSRF-TOKEN</stringProp>
+                  <stringProp name="Header.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/project/testqacucumber/test/delete" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">project/testqacucumber/test/delete</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="_csrf" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">_csrf</stringProp>
+                  <stringProp name="Argument.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="controlString" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">controlString</stringProp>
+                  <stringProp name="Argument.value">testqacucumber/test</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="projectUuid" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">projectUuid</stringProp>
+                  <stringProp name="Argument.value">f2608149-a783-4e9e-879e-a9eb1c95f906</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">multipart/form-data; boundary=----WebKitFormBoundaryWn9Nve4lNXTijha8</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">navigate</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-User" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-User</stringProp>
+                  <stringProp name="Header.value">?1</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">document</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">37855.0</stringProp>
+              <stringProp name="ConstantTimer.delay">18927.5</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 37855 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://gitflic.ru/auth/logout" enabled="true">
+            <stringProp name="HTTPSampler.domain">gitflic.ru</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">auth/logout</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="_csrf" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">_csrf</stringProp>
+                  <stringProp name="Argument.value">0d86edb5-e671-4320-bf77-383aafbce5f7</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">navigate</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-User" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-User</stringProp>
+                  <stringProp name="Header.value">?1</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">document</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">24052.0</stringProp>
+              <stringProp name="ConstantTimer.delay">12026</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 24052 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

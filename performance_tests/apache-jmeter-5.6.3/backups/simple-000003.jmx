@@ -1,0 +1,6 @@
+# JMeter generated Header file
+Accept	application/json, text/plain, */*
+X-CSRF-TOKEN	6bd7cfa2-daf4-4a8a-ad6a-534a470da0e2
+Sec-Fetch-Mode	cors
+Sec-Fetch-Dest	empty
+Authorization	token 82e3333d-3d62-463a-8b1b-f0326df0c37d
